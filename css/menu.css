@@ -29,3 +29,33 @@
     align-items: center;
     justify-content: center;
 }
+
+
+/* Hamburger line */
+
+.menu-wrap .hamburger > div{
+    position: relative;
+    height: 2px;
+    width: 100%;
+    background:white;
+    display: flex;
+    flex: none;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.menu-wrap .hamburger > div::before,
+.menu-wrap .hamburger > div::after{
+    content: "";
+    position: absolute;
+    background:inherit;
+    z-index: 1;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+}
+
+.menu-wrap .hamburger > div::after{
+    top: 10px;
+}
