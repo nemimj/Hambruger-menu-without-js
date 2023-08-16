@@ -42,6 +42,7 @@
     flex: none;
     justify-content: center;
     align-items: center;
+    transition: all 0.4s ease;
 }
 
 
@@ -59,3 +60,23 @@
 .menu-wrap .hamburger > div::after{
     top: 10px;
 }
+
+
+
+
+/*  Toggler Animation */
+
+.menu-wrap .toggler:checked + .hamburger > div{
+    transform: rotate(-135deg);
+    /* transform: all var(--menu-speed) ease-in-out; */
+}
+
+/* Turns lines to X */
+
+.menu-wrap .toggler:checked + .hamburger > div::before,
+.menu-wrap .toggler:checked + .hamburger > div::after{
+        top: 0;
+        transform: rotate(90deg);
+        background-color: brown;
+}
+
